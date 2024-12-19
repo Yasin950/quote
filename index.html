@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цитаты для души</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e2a47, #3e4b82);
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3rem;
+        }
+        .quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .category {
+            margin: 30px 0;
+            font-size: 1.2rem;
+        }
+        .category a {
+            color: #f1c40f;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .category a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #2d3e66;
+            padding: 20px;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Цитаты для души</h1>
+    <div class="quote" id="quote">
+        <p>"Делайте то, что вы любите, и не думайте о времени." - Лао Цзы</p>
+    </div>
+    <button onclick="changeQuote()">Следующая цитата</button>
+    
+    <div class="category">
+        <a href="quote-life.html">О жизни</a>
+        <a href="quote-loveindex.html">О любви</a>
+        <a href="mudrost.html">Мудрость</a>
+        <a href="psyhology.html">Психология</a>
+    </div>
+
+    <footer>
+        <p>Цитаты для вдохновения | &copy; 2024</p>
+    </footer>
+
+    <script>
+        const quotes = [
+            '"Делайте то, что вы любите, и не думайте о времени." - Лао Цзы',
+            '"Жизнь — это не проблема, которую нужно решить, а реальность, которую нужно пережить." - Сёрен Кьеркегор',
+            '"Все, что ты можешь сделать, это выбрать, что делать с тем, что тебе дано." - Дж. К. Роулинг'
+        ];
+
+        let currentQuoteIndex = 0;
+
+        function changeQuote() {
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            const quoteElement = document.getElementById('quote');
+            quoteElement.style.animation = 'none'; // сбрасываем анимацию
+            quoteElement.offsetHeight; // заставляем браузер пересчитать стиль
+            quoteElement.style.animation = 'fadeIn 2s forwards'; // снова применяем анимацию
+
+            quoteElement.innerHTML = `<p>${quotes[currentQuoteIndex]}</p>`;
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

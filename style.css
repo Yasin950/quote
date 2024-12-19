@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.bg {
+    background-image: url('https://png.pngtree.com/background/20220714/original/pngtree-dark-background-2-picture-image_1603129.jpg'); /* Замените на ссылку на ваш фон */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+h1 {
+    color: #f1f1f1;
+    padding-top: 20vh;
+    font-size: 4rem;
+}
+
+.quote {
+    color: #f1f1f1;
+    font-size: 2rem;
+    margin-top: 50px;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
